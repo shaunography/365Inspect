@@ -25,6 +25,5 @@
             "Text": "Azure AD Default Configuration Blunders"
         }
     ],
-    "CIS_M365": "1.1.22",
-    "CIS_Azure": "1.3"
+    "CIS_M365": "1.1.22"
 }

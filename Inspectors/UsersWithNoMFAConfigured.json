@@ -13,6 +13,5 @@
             "Text": "Set Up Multi-Factor Authentication"
         }
     ],
-    "CIS_M365": "1.1.4",
-    "CIS_Azure": "1.1.3"
+    "CIS_M365": "1.1.4"
 }

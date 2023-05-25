@@ -17,6 +17,5 @@
             "Text": "Common Conditional Access Policies"
 		}
 	],
-	"CIS_M365" : "1.1.1",
-	"CIS_Azure" : "1.1.1"
+	"CIS_M365" : "1.1.1"
 }
