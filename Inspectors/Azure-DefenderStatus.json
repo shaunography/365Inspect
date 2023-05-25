@@ -1,0 +1,12 @@
+{
+	"FindingName": "Microsfot Defender disabled",
+	"Description": "",
+	"Remediation": "",
+	"DefaultValue" : "",
+    "ExpectedValue" : "",
+    "ReturnedValue" : "",
+    "Impact": "Low",
+    "AffectedObjects": "",
+	"References": [],
+	"CIS_Azure": "2.1.1-2.1.12"
+}

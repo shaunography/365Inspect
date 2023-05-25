@@ -1,0 +1,12 @@
+{
+	"FindingName": "Ensure the 'Minimum TLS version' is set to 'Version 1.2'",
+	"Description": "",
+	"Remediation": "",
+	"DefaultValue" : "",
+    "ExpectedValue" : "",
+    "ReturnedValue" : "",
+    "Impact": "Low",
+    "AffectedObjects": "",
+	"References": [],
+	"CIS_Azure": "3.15"
+}

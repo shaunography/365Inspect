@@ -16,5 +16,6 @@
 			"Url": "https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/Inspect-and-remediate-illicit-consent-grants?view=o365-worldwide",
 			"Text": "Detect and Remediate Illicit Content Grants"
 		}
-	]
+	],
+	"CIS_Azure": "1.14"
 }

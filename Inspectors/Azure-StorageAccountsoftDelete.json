@@ -1,0 +1,12 @@
+{
+	"FindingName": "Ensure soft delete is enabled for Azure Storage,The following accounts do not have soft delete enabled",
+	"Description": "",
+	"Remediation": "",
+	"DefaultValue" : "",
+    "ExpectedValue" : "",
+    "ReturnedValue" : "",
+    "Impact": "Low",
+    "AffectedObjects": "",
+	"References": [],
+	"CIS_Azure": "3.11"
+}

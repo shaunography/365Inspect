@@ -1,0 +1,12 @@
+{
+	"FindingName": "Ensure that 'Secure transfer required' is set to 'Enabled'",
+	"Description": "",
+	"Remediation": "",
+	"DefaultValue" : "",
+    "ExpectedValue" : "",
+    "ReturnedValue" : "",
+    "Impact": "Low",
+    "AffectedObjects": "",
+	"References": [],
+	"CIS_Azure": "3.1"
+}

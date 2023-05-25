@@ -1,0 +1,12 @@
+{
+	"FindingName": "Ensure Trusted Locations Are Defined",
+	"Description": "",
+	"Remediation": "",
+	"DefaultValue" : "",
+    "ExpectedValue" : "",
+    "ReturnedValue" : "",
+    "Impact": "Low",
+    "AffectedObjects": "",
+	"References": [],
+	"CIS_Azure": "1.2.1"
+}

@@ -10,7 +10,7 @@ function Inspect-GuestUsers {
 
         $users = Get-MgUser -All
         $guests | where {$_.UserPrincipalName -match ".*#EXT#.*"}
-        if (guests) {
+        if ($guests) {
             return $guests.Mail
         }
         
