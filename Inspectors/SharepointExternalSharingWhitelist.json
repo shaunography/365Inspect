@@ -1,0 +1,25 @@
+{
+	"FindingName": "Ensure SharePoint external sharing is managed through domain whitelist/blacklists",
+	"Description": "Control sharing of documents to external domains by either blocking domains or only allowing sharing with specific named domains.",
+	"Remediation": "Depending on the organization's use case, external user resharing may be disabled. This is most easily accomplished with the Set-SPOTenant PowerShell commandlet from the SharePoint Online administration module, as follows: Set-SPOTenant -PreventExternalUsersFromResharing $true.",
+	"DefaultValue" : "N/A",
+    "ExpectedValue" : "N/A",
+    "ReturnedValue" : "",
+    "Impact": "Medium",
+    "AffectedObjects": "",
+	"References": [
+		{
+			"Url": "Set-SPOTenant Reference",
+			"Text": "https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/set-spotenant?view=sharepoint-ps"
+		},
+		{
+			"Url": "https://docs.microsoft.com/en-us/sharepoint/turn-external-sharing-on-or-off",
+			"Text": "Manage sharing settings"
+		},
+		{
+			"Url": "https://docs.microsoft.com/en-us/microsoft-365/solutions/microsoft-365-limit-sharing?view=o365-worldwide",
+			"Text": "Limit sharing in M365"
+		}
+	],
+	"CIS_M365": "6.1"
+}

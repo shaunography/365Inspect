@@ -1,0 +1,17 @@
+{
+	"FindingName": "Block OneDrive for Business sync from unmanaged devices",
+	"Description": "Microsoft OneDrive allows users to sign in their cloud tenant account, and begin syncing select folders or the entire contents of OneDrive to a local computer. By default this includes any computer with OneDrive already installed, whether or not it is Azure Domain Joined or Active Directory Domain joined.",
+	"Remediation": "Enabling this feature will prevent users from using the OneDrive for Business Sync client on devices that are not joined to the domains that were defined.",
+	"DefaultValue" : "N/A",
+    "ExpectedValue" : "N/A",
+    "ReturnedValue" : "",
+    "Impact": "Low",
+    "AffectedObjects": "",
+	"References": [
+		{
+			"Text": "https://learn.microsoft.com/en-US/sharepoint/allow-syncing-only-on-specific-domains?WT.mc_id=365AdminCSH_spo",
+			"Url": "Only syncing on specific domains"
+		}
+	],
+	"CIS_M365": "6.2"
+}

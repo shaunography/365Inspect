@@ -12,5 +12,6 @@
 			"Url": "https://docs.microsoft.com/en-us/microsoft-365/solutions/best-practices-anonymous-sharing?view=o365-worldwide",
 			"Text": "Best practices for sharing files and folders with unauthenticated users"
 		}
-	]
+	],
+	"CIS_M365" : "6.3"
 }

@@ -14,23 +14,23 @@ Try {
 
 		 $configuration = Get-CsTeamsClientConfiguration
 
-         If (($configuration.AllowDropBox -eq $true) {
+         If ($configuration.AllowDropBox -eq $true) {
              $results += "DropBox Allowed"
          }
 
-         If (($configuration.AllowBox -eq $true) {
+         If ($configuration.AllowBox -eq $true) {
              $results += "Box Allowed"
          }
 
-         If (($configuration.AllowGoogleDrive -eq $true) {
+         If ($configuration.AllowGoogleDrive -eq $true) {
              $results += "Google Drive Allowed"
          }
 
-         If (($configuration.AllowShareFile -eq $true) {
+         If ($configuration.AllowShareFile -eq $true) {
              $results += "Share File Allowed"
          }
 
-         If (($configuration.AllowEgnyte -eq $true) {
+         If ($configuration.AllowEgnyte -eq $true) {
              $results += "Egnyte Allowed"
          }
          
