@@ -16,5 +16,6 @@
 			"Url": "https://docs.microsoft.com/en-us/powershell/module/exchange/set-organizationconfig?view=exchange-ps",
 			"Text": "Set-OrganizationConfig Commandlet Reference"
 		}
-	]
+	],
+	"CIS_M365": "1.2"
 }

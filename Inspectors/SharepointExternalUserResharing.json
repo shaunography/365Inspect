@@ -20,5 +20,6 @@
 			"Url": "https://docs.microsoft.com/en-us/microsoft-365/solutions/microsoft-365-limit-sharing?view=o365-worldwide",
 			"Text": "Limit sharing in M365"
 		}
-	]
+	],
+	"CIS_M365": "3.6"
 }

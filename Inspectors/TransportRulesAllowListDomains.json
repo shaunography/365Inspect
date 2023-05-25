@@ -16,5 +16,6 @@
 			"Url": "https://docs.sophos.com/central/Customer/help/en-us/central/Customer/tasks/bypassingexchange.html",
 			"Text": "Bypassing Exchange Online Protection in Office 365"
 		}
-	]
+	],
+	"CIS_M365": "4.4"
 }

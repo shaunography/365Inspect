@@ -20,5 +20,6 @@
 			"Url": "https://contosoedu.com/legacy-auth-and-the-risk/",
 			"Text": "Legacy Auth and the Risk"
 		}
-	]
+	],
+	"CIS_M365": "1.3"
 }

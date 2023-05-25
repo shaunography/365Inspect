@@ -16,5 +16,6 @@
 			"Url": "http://www.thatlazyadmin.com/2019/04/01/configure-outbound-spam-notification-office-365-exchange-online/",
 			"Text": "Configure Outbound Spam Notification Office 365 Exchange Online"
 		}
-	]
+	],
+	"CIS_M365": "4.2"
 }

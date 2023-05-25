@@ -1,0 +1,17 @@
+{
+	"FindingName": "Ensure external file sharing in Teams is enabled for only approved cloud storage services",
+	"Description": "Microsoft Teams enables collaboration via file sharing. This file sharing is conducted within Teams, using SharePoint Online, by default; however, third-party cloud services are allowed as well. Ensuring that only authorized cloud storage providers are accessible from Teams will help to dissuade the use of non-approved storage providers.",
+	"Remediation": "Review the list of enabled cloud providers and disable any that are not used and approved.",
+	"DefaultValue" : "Not applicable",
+    "ExpectedValue" : "Not applicable",
+    "ReturnedValue" : "Not applicable",
+    "Impact": "<span style=\"color:DarkOrange;\"><strong>Low</strong></span>",
+    "AffectedObjects": "",
+	"References": [
+		{
+			"Url": "ttps://learn.microsoft.com/en-us/microsoft-365/enterprise/manage-skype-for-business-online-with-microsoft-365-powershell?view=o365-worldwide",
+			"Text": "Manage Skype for business"
+		}
+	],
+	"CIS_M365": "3.7"
+}

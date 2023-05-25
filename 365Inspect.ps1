@@ -67,7 +67,7 @@ Function Connect-Services {
         Try {
             Write-Output "Connecting to Microsoft Graph"
             Connect-MgGraph -ContextScope Process -Scopes "AuditLog.Read.All", "Policy.Read.All", "Directory.Read.All", "IdentityProvider.Read.All", "Organization.Read.All", "Securityevents.Read.All", "ThreatIndicators.Read.All", "SecurityActions.Read.All", "User.Read.All", "UserAuthenticationMethod.Read.All", "MailboxSettings.Read", "DeviceManagementManagedDevices.Read.All", "DeviceManagementApps.Read.All", "UserAuthenticationMethod.ReadWrite.All", "DeviceManagementServiceConfig.Read.All", "DeviceManagementConfiguration.Read.All"
-            Select-MgProfile -Name beta
+            #Select-MgProfile -Name beta
             $global:orgInfo = ((Get-MgOrganization).VerifiedDomains | Where-Object { $_.Name -match 'onmicrosoft.com' })[0].Name
             Write-Output "Connected via Graph to $((Get-MgOrganization).DisplayName)"
         }
@@ -87,7 +87,8 @@ Function Connect-Services {
         }
         Try {
             Write-Output "Connecting to SharePoint Service"
-            $org_name = ($global:orgInfo -split '.onmicrosoft.com')[0]
+            #$org_name = ($global:orgInfo -split '.onmicrosoft.com')[0]
+            $org_name = ($global:orgInfo -split '\.')[0]
             Connect-SPOService -Url "https://$org_name-admin.sharepoint.com"
         }
         Catch {
@@ -145,43 +146,43 @@ Function Confirm-InstalledModules {
     $MSTeams = @{ Name = "MicrosoftTeams"; MinimumVersion = "4.4.1" }
     $psGet = @{ Name = "PowerShellGet"; RequiredVersion = "2.2.5" }
 
-    Try {
-        $psGetVersion = Get-InstalledModule -Name PowerShellGet -ErrorAction Stop
-
-        If ($psGetVersion.Version -lt '2.2.5') {
-            Write-Host "[-] " -ForegroundColor Red -NoNewline
-            Write-Warning "PowerShellGet is not the correct version. Please install using the following command:"
-            Write-Host "Update-Module " -ForegroundColor Yellow -NoNewline
-            Write-Host "-Name " -ForegroundColor Gray -NoNewline
-            Write-Host "PowerShellGet " -ForegroundColor White -NoNewline
-            Write-Host '-Force' -ForegroundColor Gray
-            $IsAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]"Administrator")
-            if (-not $IsAdmin) {
-                Write-Warning "PowerShellGet is not the correct version. Please install using the following command:"
-                Write-Host "Update-Module " -ForegroundColor Yellow -NoNewline
-                Write-Host "-Name " -ForegroundColor Gray -NoNewline
-                Write-Host "PowerShellGet " -ForegroundColor White -NoNewline
-                Write-Host '-Force' -ForegroundColor Gray
-            }
-            Else {
-                Write-Host "Installing PowerShellGet`n" -ForegroundColor Magenta
-                Install-Module -Name 'PowerShellGet' -AllowPrerelease -AllowClobber -Force -MinimumVersion '2.2.5'
-            }
-        }
-    }
-    Catch {
-        $exc = $_
-        if ($exc -like "*No match was found for the specified search criteria and module names 'powershellget'*") {
-            Write-Host "[-] " -ForegroundColor Red -NoNewline
-            Write-Warning "PowerShellGet was not installed via PowerShell Gallery. Please install using the following command:"
-            Write-Host "Install-Module " -ForegroundColor Yellow -NoNewline
-            Write-Host "-Name " -ForegroundColor Gray -NoNewline
-            Write-Host "PowerShellGet " -ForegroundColor White -NoNewline
-            Write-Host "-RequiredVersion " -ForegroundColor Gray -NoNewline
-            Write-Host '2.2.5 ' -ForegroundColor White -NoNewline
-            Write-Host '-Force' -ForegroundColor Gray
-        }
-    }
+    #Try {
+    #    $psGetVersion = Get-InstalledModule -Name PowerShellGet -ErrorAction Stop
+#
+    #    If ($psGetVersion.Version -lt '2.2.5') {
+    #        Write-Host "[-] " -ForegroundColor Red -NoNewline
+    #        Write-Warning "PowerShellGet is not the correct version. Please install using the following command:"
+    #        Write-Host "Update-Module " -ForegroundColor Yellow -NoNewline
+    #        Write-Host "-Name " -ForegroundColor Gray -NoNewline
+    #        Write-Host "PowerShellGet " -ForegroundColor White -NoNewline
+    #        Write-Host '-Force' -ForegroundColor Gray
+    #        $IsAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]"Administrator")
+    #        if (-not $IsAdmin) {
+    #            Write-Warning "PowerShellGet is not the correct version. Please install using the following command:"
+    #            Write-Host "Update-Module " -ForegroundColor Yellow -NoNewline
+    #            Write-Host "-Name " -ForegroundColor Gray -NoNewline
+    #            Write-Host "PowerShellGet " -ForegroundColor White -NoNewline
+    #            Write-Host '-Force' -ForegroundColor Gray
+    #        }
+    #        Else {
+    #            Write-Host "Installing PowerShellGet`n" -ForegroundColor Magenta
+    #            Install-Module -Name 'PowerShellGet' -AllowPrerelease -AllowClobber -Force -MinimumVersion '2.2.5'
+    #        }
+    #    }
+    #}
+    #Catch {
+    #    $exc = $_
+    #    if ($exc -like "*No match was found for the specified search criteria and module names 'powershellget'*") {
+    #        Write-Host "[-] " -ForegroundColor Red -NoNewline
+    #        Write-Warning "PowerShellGet was not installed via PowerShell Gallery. Please install using the following command:"
+    #        Write-Host "Install-Module " -ForegroundColor Yellow -NoNewline
+    #        Write-Host "-Name " -ForegroundColor Gray -NoNewline
+    #        Write-Host "PowerShellGet " -ForegroundColor White -NoNewline
+    #        Write-Host "-RequiredVersion " -ForegroundColor Gray -NoNewline
+    #        Write-Host '2.2.5 ' -ForegroundColor White -NoNewline
+    #        Write-Host '-Force' -ForegroundColor Gray
+    #    }
+    #}
 
     $modules = @($psGet, $ExchangeOnlineManagement, $Graph, $SharePoint, $MSTeams)
     $count = 0
@@ -423,6 +424,7 @@ Function HTML-Report {
             # Insert finding name and number into template HTML
             $short_finding_html = $short_finding_html.Replace("{{FINDING_NAME}}", $finding.FindingName)
             $short_finding_html = $short_finding_html.Replace("{{FINDING_NUMBER}}", $findings_count.ToString())
+            $short_finding_html = $short_finding_html.Replace("{{CIS}}", $findings.CIS)
             $long_finding_html = $long_finding_html.Replace("{{FINDING_NAME}}", $finding.FindingName)
             $long_finding_html = $long_finding_html.Replace("{{FINDING_NUMBER}}", $findings_count.ToString())
             

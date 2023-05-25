@@ -20,7 +20,7 @@ Try {
 		$roleMembers = Get-MgDirectoryRoleMember -DirectoryRoleId $role.Id
 
 		Foreach ($user in $roleMembers) {
-			$member = Get-MgDirectoryObjectById -Ids $user.Id
+			$member = Get-MgDirectoryObject -DirectoryObjectId $user.Id
 			If ($member.OnPremisesSyncEnabled -eq $true){
 				$dirsyncAdmins += "$role : $($member.UserPrincipalName)`n"
 			}

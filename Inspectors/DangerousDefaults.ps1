@@ -45,6 +45,9 @@ Try {
     if ($authPolicy.AllowInvitesFrom -like "everyone"){
         $dangerousDefaults += "Guests can invite other guests into the tenant"
     }
+    if ($authPolicy.DefaultUserRolePermissions.AdditionalProperties.allowedToCreateTenants -eq $true){
+        $dangerousDefaults += "Non-privileged users can create tenants in the Azure AD"
+    }
 
     If ($dangerousDefaults.count -ne 0){
         Return $dangerousDefaults

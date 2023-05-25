@@ -20,5 +20,6 @@
 			"Url": "https://www.thatlazyadmin.com/disable-anonymous-calendar-sharing-office-365-admin-center-powershell/",
 			"Text": "ThatLazyAdmin: Disabling anonymous calendar sharing"
 		}
-	]
+	],
+	"CIS_M365": "2.3"
 }

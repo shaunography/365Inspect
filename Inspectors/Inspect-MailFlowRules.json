@@ -12,5 +12,6 @@
 			"Url": "https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules",
 			"Text": "Manage Mail Flow Rules in Exchange Online"
 		}
-	]
+	],
+	"CIS_M365": "4.3,4.4"
 }

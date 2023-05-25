@@ -20,5 +20,6 @@
 			"Url": "https://www.microsoft.com/en-us/microsoft-365/roadmap?rtc=2&filters=&searchterms=Safe%2CLinks%2CProtection%2Cfor%2CMicrosoft%2CTeams",
 			"Text": "Feature Roadmap for Safe Links for Microsoft Teams"
 		}
-	]
+	],
+	"CIS_M365": "2.4"
 }

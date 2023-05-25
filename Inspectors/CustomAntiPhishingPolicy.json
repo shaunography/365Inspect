@@ -16,5 +16,6 @@
 			"Url": "https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/configure-mdo-anti-phishing-policies?view=o365-worldwide",
 			"Text": "Configure anti-phishing policies "
 		}
-	]
+	],
+	"CIS_M365": "4.6"
 }

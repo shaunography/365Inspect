@@ -16,5 +16,6 @@
 			"Url": "https://postmarkapp.com/blog/explaining-spf",
 			"Text": "Explaining SPF Records"
 		}
-	]
+	],
+	"CIS_M365": "4.8"
 }

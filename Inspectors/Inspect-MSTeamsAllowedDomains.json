@@ -16,5 +16,6 @@
             "Url": "https://docs.microsoft.com/en-us/microsoftteams/communicate-with-users-from-other-organizations",
             "Text": "Use guest and external access to collaborate with people outside your organization"
         }
-	]
+	],
+	"CIS_M365": "3.3"
 }

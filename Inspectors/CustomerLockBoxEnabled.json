@@ -1,0 +1,17 @@
+{
+    "FindingName": "Ensure the customer lockbox feature is enabled",
+    "Description": "Customer Lockbox is a security feature that provides an additional layer of control and transparency to customer data in Microsoft 365. It offers an approval process for Microsoft support personnel to access organization data and creates an audited trail to meet compliance requirements.",
+    "Remediation": "Enable customer lock box",
+    "DefaultValue": "False",
+    "ExpectedValue": "True",
+    "ReturnedValue": "",
+    "Impact": "<span><strong>Info</strong></span>",
+    "AffectedObjects": "",
+    "References": [
+        {
+            "Url": "https://learn.microsoft.com/en-us/azure/security/fundamentals/customer-lockbox-overview",
+            "Text": "Customer Lockbox Overview"
+        }
+    ],
+    "CIS_M365": "3.1"
+}

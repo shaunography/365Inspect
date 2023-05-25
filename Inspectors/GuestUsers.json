@@ -1,0 +1,18 @@
+{
+    "FindingName": "Guest Users",
+    "Description": "",
+    "Remediation": "",
+    "DefaultValue": "",
+    "ExpectedValue": "N/A",
+    "ReturnedValue": "",
+    "Impact": "Low",
+    "AffectedObjects": "",
+    "References": [
+        {
+            "Url": "https://learn.microsoft.com/en-us/azure/active-directory/governance/create-access-review",
+            "Text": "Create Access Reviews"
+        }
+    ],
+    "CIS_M365": "5.1.1, 5.15",
+    "CIS_Azure": "1.5"
+}

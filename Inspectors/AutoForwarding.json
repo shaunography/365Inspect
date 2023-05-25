@@ -20,5 +20,6 @@
 			"Url": "https://image.communications.cyber.nj.gov/lib/fe3e15707564047c7c1270/m/2/FBI+PIN+-+11.25.2020.pdf",
 			"Text": "FBI: Cyber Criminals Exploit Mail Forwarding Rules During Business Email Compromise"
 		}
-	]
+	],
+	"CIS_M365": "4.3"
 }

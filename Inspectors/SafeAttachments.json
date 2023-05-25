@@ -16,5 +16,6 @@
 			"Url": "https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/set-up-safe-attachments-policies?view=o365-worldwide",
 			"Text": "Set Up Safe Attachments Policies"
 		}
-	]
+	],
+	"CIS_M365": "2.5,4.5"
 }

@@ -12,5 +12,7 @@
             "Url": "https://docs.microsoft.com/en-us/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication?view=o365-worldwide",
             "Text": "Set Up Multi-Factor Authentication"
         }
-    ]
+    ],
+    "CIS_M365": "1.1.4",
+    "CIS_Azure": "1.1.3"
 }

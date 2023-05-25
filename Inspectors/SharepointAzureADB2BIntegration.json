@@ -1,0 +1,18 @@
+{
+	"FindingName": "Ensure Office 365 SharePoint infected files are disallowed for download",
+	"Description": "By default SharePoint online allows files that Defender for Office 365 has detected as infected to be downloaded. Defender for Office 365 for SharePoint, OneDrive, and Microsoft Teams protects your organization from inadvertently sharing malicious files. When an infected file is detected, that file is blocked so that no one can open, copy, move, or share it until further actions are taken by the organization's security team.",
+	"Remediation": "Set-SPOTenant -DisallowInfectedFileDownload $true",
+	"DefaultValue" : "False",
+    "ExpectedValue" : "True",
+    "ReturnedValue" : "",
+    "Impact": "<span style=\"color:Crimson;\"><strong>Low</strong></span>",
+    "AffectedObjects": "",
+	"References": [
+		{
+			"Url": "ttps://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/anti-malware-protection-for-spo-odfb-teams-about?view=o365-worldwide",
+			"Text": "Anti Malware Protection"
+		}
+	],
+	"CIS_M365": "2.12"
+
+}

@@ -16,5 +16,6 @@
             "Url": "https://docs.microsoft.com/en-us/microsoft-365/compliance/create-test-tune-dlp-policy?view=o365-worldwide",
             "Text": "Create, test, and tune a DLP policy"
         }
-	]
+	],
+	"CIS_M365": "3.4,3.5"
 }

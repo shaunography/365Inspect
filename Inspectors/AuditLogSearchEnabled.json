@@ -12,5 +12,6 @@
 			"Url": "https://docs.microsoft.com/en-us/microsoft-365/compliance/turn-audit-log-search-on-or-off?view=o365-worldwide",
 			"Text": "Turn Audit Log Search On or Off"
 		}
-	]
+	],
+	"CIS_M365": "5.2"
 }

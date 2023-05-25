@@ -12,5 +12,6 @@
 			"Url": "https://docs.microsoft.com/en-us/powershell/module/exchange/set-safelinkspolicy?view=exchange-ps",
 			"Text": "Set-SafeLinksPolicy Reference"
 		}
-	]
+	],
+	"CIS_M365": "2.4"
 }

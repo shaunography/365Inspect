@@ -24,5 +24,6 @@
             "Url": "https://medium.com/soteria-security/azure-ad-default-configuration-blunders-c7abddeae56",
             "Text": "Azure AD Default Configuration Blunders"
         }
-    ]
+    ],
+    "CIS_M365": "1.1.22"
 }

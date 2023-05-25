@@ -20,5 +20,6 @@
 			"Url": "http://dkim.org/info/dkim-faq.html",
 			"Text": "DKIM FAQ"
 		}
-	]
+	],
+	"CIS_M365": "4.7"
 }

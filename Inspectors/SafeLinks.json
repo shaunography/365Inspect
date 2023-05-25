@@ -16,5 +16,6 @@
 			"Url": "https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/safe-links?view=o365-worldwide",
 			"Text": "Microsoft Safe Links reference"
 		}
-	]
+	],
+	"CIS_M365": "2.4"
 }

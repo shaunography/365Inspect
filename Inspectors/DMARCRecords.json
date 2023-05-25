@@ -20,5 +20,6 @@
 			"Url": "https://mxtoolbox.com/dmarc/details/what-is-a-dmarc-record",
 			"Text": "What is a DMARC record?"
 		}
-	]
+	],
+	"CIS_M365": "4.9"
 }
