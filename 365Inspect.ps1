@@ -424,7 +424,7 @@ Function HTML-Report {
             # Insert finding name and number into template HTML
             $short_finding_html = $short_finding_html.Replace("{{FINDING_NAME}}", $finding.FindingName)
             $short_finding_html = $short_finding_html.Replace("{{FINDING_NUMBER}}", $findings_count.ToString())
-            $short_finding_html = $short_finding_html.Replace("{{CIS}}", $findings.CIS)
+            $short_finding_html = $short_finding_html.Replace("{{CIS_M365}}", $findings.CIS_M365)
             $long_finding_html = $long_finding_html.Replace("{{FINDING_NAME}}", $finding.FindingName)
             $long_finding_html = $long_finding_html.Replace("{{FINDING_NUMBER}}", $findings_count.ToString())
             
