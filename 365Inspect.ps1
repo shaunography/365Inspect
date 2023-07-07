@@ -66,9 +66,9 @@ Function Connect-Services {
     If ($auth -EQ "MFA") {
         Try {
             Write-Output "Connecting to Microsoft Graph"
-            Connect-MgGraph -ContextScope Process -Scopes "AuditLog.Read.All", "Policy.Read.All", "Directory.Read.All", "IdentityProvider.Read.All", "Organization.Read.All", "Securityevents.Read.All", "ThreatIndicators.Read.All", "SecurityActions.Read.All", "User.Read.All", "UserAuthenticationMethod.Read.All", "MailboxSettings.Read", "DeviceManagementManagedDevices.Read.All", "DeviceManagementApps.Read.All", "UserAuthenticationMethod.ReadWrite.All", "DeviceManagementServiceConfig.Read.All", "DeviceManagementConfiguration.Read.All"
+            Connect-MgGraph -ContextScope Process -Scopes "AuditLog.Read.All", "Policy.Read.All", "Directory.Read.All", "IdentityProvider.Read.All", "Organization.Read.All", "Securityevents.Read.All", "ThreatIndicators.Read.All", "SecurityActions.Read.All", "User.Read.All", "UserAuthenticationMethod.Read.All", "MailboxSettings.Read", "DeviceManagementManagedDevices.Read.All", "DeviceManagementApps.Read.All", "UserAuthenticationMethod.ReadWrite.All", "DeviceManagementServiceConfig.Read.All", "DeviceManagementConfiguration.Read.All" -UseDeviceCode
             #Select-MgProfile -Name beta
-            $global:orgInfo = ((Get-MgOrganization).VerifiedDomains | Where-Object { $_.Name -match 'onmicrosoft.com' })[0].Name
+            $global:orgInfo = ((Get-MgOrganization).VerifiedDomains | Where-Object { $_.Name -match 'onmicrosoft.com' }).Name
             Write-Output "Connected via Graph to $((Get-MgOrganization).DisplayName)"
         }
         Catch {
@@ -424,7 +424,7 @@ Function HTML-Report {
             # Insert finding name and number into template HTML
             $short_finding_html = $short_finding_html.Replace("{{FINDING_NAME}}", $finding.FindingName)
             $short_finding_html = $short_finding_html.Replace("{{FINDING_NUMBER}}", $findings_count.ToString())
-            $short_finding_html = $short_finding_html.Replace("{{CIS_M365}}", $findings.CIS_M365)
+            $short_finding_html = $short_finding_html.Replace("{{CIS_M365}}", $finding.CIS_M365)
             $long_finding_html = $long_finding_html.Replace("{{FINDING_NAME}}", $finding.FindingName)
             $long_finding_html = $long_finding_html.Replace("{{FINDING_NUMBER}}", $findings_count.ToString())
             
